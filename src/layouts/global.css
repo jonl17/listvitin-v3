@@ -1,0 +1,28 @@
+:root {
+  font-size: 115%;
+  --primary: hotpink;
+  --black: rgb(16,16,16);
+  --white: white;
+  --gray: lightgray;
+  --smallestPad: 1.5rem;
+  --smallPad: 2.5em;
+  --mediumPad: 5em;
+  --largePad: 10em;
+  --mobileBreakpoint: 900px;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,body {
+  margin: 0;
+}
+h1,h2,h3,h4 {
+  font-weight: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.active {
+  color: var(--primary);
+}

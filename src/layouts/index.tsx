@@ -1,4 +1,8 @@
 import React, { ReactChild } from 'react'
+import "./global.css"
+
+import Header from "~/components/Header/index"
+import Provider from '~/context/BurgerMenu'
 
 interface Props {
   children: ReactChild
@@ -6,9 +10,12 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <div>
+    <>
+      <Provider>
+        <Header></Header>
+      </Provider>
       {children}
-    </div>
+    </>
   )
 }
 
