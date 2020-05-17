@@ -1,3 +1,4 @@
+
 export type Open = { open: string | null };
 export type TranslatableName = {
   is: string;

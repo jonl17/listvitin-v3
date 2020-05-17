@@ -14,7 +14,6 @@ export const HeaderContainer = styled.div`
   }
   .title {
     font-size: 1.5em;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
   }
