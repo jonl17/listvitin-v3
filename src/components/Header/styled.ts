@@ -3,24 +3,28 @@ import { breakpoints } from "~/shared/constants"
 import { Open } from "~/types"
 
 export const HeaderContainer = styled.div`
-  position: relative;
-  height: var(--mediumPad);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--smallPad);
   display: grid;
-  grid-template-columns: minmax(auto, var(--largePad)) auto;
+  grid-template-columns: var(--boxSize) auto;
+  box-sizing: border-box;
   padding: 0 var(--mediumPad);
+  z-index: 8;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background: white;
 
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 var(--smallestPad);
   }
-  .title {
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-  }
   .pages-wrap {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    position: absolute;
+    right: var(--mediumPad);
+    height: 100%;
     p {
       margin-left: var(--mediumPad);
     }

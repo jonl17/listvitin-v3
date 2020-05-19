@@ -1,10 +1,11 @@
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useContext } from 'react'
-import { useStaticQuery, graphql, Link } from "gatsby"
-import { HeaderMetaData } from '~/types'
-
-import { HeaderContainer } from "./styled"
 import Burger from "~/components/Burger"
 import { BurgerMenuContext } from '~/context/BurgerMenu'
+import { HeaderMetaData } from '~/types'
+import Listvitinn from '../Listvitinn'
+import { HeaderContainer } from "./styled"
+
 
 const Header = () => {
   const data: HeaderMetaData = useStaticQuery(graphql`
@@ -27,11 +28,7 @@ const Header = () => {
   const { open, setOpen } = useContext(BurgerMenuContext)
   return (
     <HeaderContainer open={open ? "open" : null}>
-      <h1 className="title">
-        <Link to="/">
-          {title}
-        </Link>
-      </h1>
+      <Listvitinn title={title}></Listvitinn>
       <div className="pages-wrap">
         {pages.map((page, index) => (
           <p key={index}>

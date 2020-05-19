@@ -22,6 +22,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static/assets`,
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,

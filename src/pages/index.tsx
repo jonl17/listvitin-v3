@@ -1,57 +1,19 @@
 import React from 'react'
-import { graphql } from "gatsby"
-import { Syning } from '~/types'
-import { exhibitionFilter } from "~/shared/methods"
+import styled from "styled-components"
+import Syningar from "~/components/Syningar"
 
-interface Props {
-  data: {
-    exhibitions: {
-      nodes: Syning[];
-    }
-  }
-}
+const PageWrap = styled.div`
+  display: grid;
+  grid-template-columns: var(--boxSize) 1fr;
+`
 
-const Index: React.FC<Props> = ({ data: { exhibitions: { nodes } } }) => {
-  exhibitionFilter("opna bráðum", nodes)
+const Index = () => {
   return (
-    <div>
-      <p>
-        listvitinn
-      </p>
-    </div>
+    <PageWrap>
+      <div>ble</div>
+      <Syningar></Syningar>
+    </PageWrap>
   )
 }
-
-export const query = graphql`
-  {
-    exhibitions: allContentfulExhibition {
-      nodes {
-        title
-        opnun
-        lokun
-        slug
-        mynd {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
-        }
-        stadur {
-          id
-          title
-          slug
-          mynd {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-        artist {
-          id
-          nafn
-        }
-      }
-    }
-  }
-`
 
 export default Index
