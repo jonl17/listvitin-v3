@@ -2,17 +2,18 @@ import styled, { css } from "styled-components"
 import { breakpoints } from "~/shared/constants"
 import { Open } from "~/types"
 
+
 export const HeaderContainer = styled.div`
+  height: 3rem;
   position: fixed;
   top: 0;
   left: 0;
-  height: var(--mediumPad);
+  transition: height .2s ease-in-out;
   display: grid;
   grid-template-columns: var(--boxSize) auto;
   box-sizing: border-box;
   z-index: 8;
   width: 100%;
-  border-bottom: 1px solid gray;
   background: white;
 
   .pages-wrap {

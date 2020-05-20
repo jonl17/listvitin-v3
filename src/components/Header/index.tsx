@@ -12,7 +12,6 @@ const Header = () => {
   {
     site {
       siteMetadata {
-        title
         pages {
           name {
             is
@@ -24,11 +23,12 @@ const Header = () => {
     }
   }
   `)
-  const { site: { siteMetadata: { title, pages } } } = data
+  const { site: { siteMetadata: { pages } } } = data
   const { open, setOpen } = useContext(BurgerMenuContext)
+
   return (
-    <HeaderContainer open={open ? "open" : null}>
-      <Listvitinn title={title}></Listvitinn>
+    <HeaderContainer open={open ? "open" : null} >
+      <Listvitinn></Listvitinn>
       <div className="pages-wrap">
         {pages.map((page, index) => (
           <p key={index}>

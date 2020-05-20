@@ -9,7 +9,7 @@
   --mediumPad: 5em;
   --largePad: 10em;
   --mobileBreakpoint: 900px;
-  --boxSize: 15em;
+  --boxSize: 14em;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;

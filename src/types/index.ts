@@ -1,4 +1,4 @@
-import { FluidObject } from "gatsby-image"
+import { FluidObject } from "gatsby-image";
 
 export type ExhibitionFilterType = "opna bráðum" | "opnar" | "afstaðnar";
 export type Open = { open: string | null };
@@ -40,4 +40,8 @@ export interface Syning {
   mynd: Mynd;
   stadur: StadurShort;
   artist: Artist[];
+}
+export interface Artist {
+  nafn: string;
+  exhibition: Syning[];
 }

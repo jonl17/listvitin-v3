@@ -8,7 +8,7 @@ interface QueryProps {
   imageSharp: Mynd
 }
 
-const Listvitinn: React.FC<{ title: string }> = ({ title }) => {
+const Listvitinn = () => {
   const data: QueryProps = useStaticQuery(graphql`
     {
       imageSharp (fluid: {originalName: {eq: "listvitinn-logo2.png"}}) {

@@ -1,20 +1,23 @@
 import React, { ReactChild } from 'react'
-import "./global.css"
-
 import Header from "~/components/Header/index"
-import Provider from '~/context/BurgerMenu'
+import BurgerProvider from '~/context/BurgerMenu'
+import FilterProvider from "~/context/Filter"
+import "./global.css"
 
 interface Props {
   children: ReactChild
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
+
   return (
     <>
-      <Provider>
-        <Header></Header>
-      </Provider>
-      {children}
+      <BurgerProvider>
+        <Header ></Header>
+      </BurgerProvider>
+      <FilterProvider>
+        {children}
+      </FilterProvider>
     </>
   )
 }

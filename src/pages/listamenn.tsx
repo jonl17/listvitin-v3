@@ -1,10 +1,14 @@
 import React from 'react'
+import ListamennList from "~/components/ListamennList"
+import { PageWrap } from "~/components/PageWrap"
+import Search from "~/components/Search"
 
 const Listamenn = () => {
   return (
-    <div>
-      <p>listamenn</p>
-    </div>
+    <PageWrap>
+      <Search></Search>
+      <ListamennList></ListamennList>
+    </PageWrap>
   )
 }
 
