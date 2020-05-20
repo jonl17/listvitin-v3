@@ -5,6 +5,8 @@ import { Open } from "~/types"
 export const BurgerContainer = styled.div`
   display: none;
   
+  position: absolute;
+  right: var(--smallPad);
   box-sizing: border-box;
   padding: 5px;
   z-index: 4;

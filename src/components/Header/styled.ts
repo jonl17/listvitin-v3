@@ -6,29 +6,24 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  height: var(--smallPad);
+  height: var(--mediumPad);
   display: grid;
   grid-template-columns: var(--boxSize) auto;
   box-sizing: border-box;
-  padding: 0 var(--mediumPad);
   z-index: 8;
   width: 100%;
   border-bottom: 1px solid gray;
   background: white;
 
-  @media (max-width: ${breakpoints.mobile}) {
-    padding: 0 var(--smallestPad);
-  }
   .pages-wrap {
     display: flex;
     align-items: center;
     position: absolute;
-    right: var(--mediumPad);
+    right: var(--smallPad);
     height: 100%;
     p {
-      margin-left: var(--mediumPad);
+      margin-left: var(--smallPad);
     }
-     
     @media (max-width: ${breakpoints.mobile}) {
       height: 100vh;
       width: 0%;
