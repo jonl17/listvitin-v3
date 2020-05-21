@@ -16,7 +16,7 @@ const pages = [
 module.exports = {
   siteMetadata: {
     title: `Listvitinn`,
-    description: `Allar myndlistarsýningar á Ísland á einum stað.`,
+    description: `Myndlistasýningar á Íslandi.`,
     url: `https://listvitinn.art/`,
     logo: "/assets/listvitinn-logo2.png",
     favicon: "assets/viti.png",
