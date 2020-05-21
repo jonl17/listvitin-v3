@@ -1,4 +1,5 @@
 import React, { ReactChild } from 'react'
+import SEO from "~/components/SEO"
 import FilterProvider from "~/context/Filter"
 import "./global.css"
 
@@ -13,6 +14,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       {/* <BurgerProvider>
         <Header ></Header>
       </BurgerProvider> */}
+      <SEO></SEO>
       <FilterProvider>
         {children}
       </FilterProvider>

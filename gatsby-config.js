@@ -17,7 +17,9 @@ module.exports = {
   siteMetadata: {
     title: `Listvitinn`,
     description: `Allar myndlistarsýningar á Ísland á einum stað.`,
-    url: `listvitinn.art`,
+    url: `https://listvitinn.art/`,
+    logo: "/assets/listvitinn-logo2.png",
+    favicon: "assets/viti.png",
     pages: pages
   },
   plugins: [
@@ -39,6 +41,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
