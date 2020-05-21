@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React from 'react'
+import React, { useContext } from 'react'
+import Search from "~/components/Search"
+import { SearchContext } from "~/context/Search"
 import { Artist as ArtistType } from "~/types"
 import Artist from "./Artist"
 import { Container } from "./styled"
@@ -20,15 +22,23 @@ const Listamennlist = () => {
         exhibition {
           title
           slug
+          opnun
+          lokun
         }
       }
     }
   }
   `)
+
+  const { searchParam } = useContext(SearchContext)
+
+  const filteredArtists = data.artists.nodes.filter(artist => artist.nafn.toLowerCase().includes(searchParam.toLowerCase()))
+
   return (
     <Container>
+      <Search></Search>
       <div className="list-wrap">
-        {data.artists.nodes.map((artist, index) => (
+        {filteredArtists.map((artist, index) => (
           <Artist key={index} artist={artist}></Artist>
         ))}
       </div>

@@ -2,8 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   grid-area: 1/2;
-  margin-top: var(--mediumPad);
   padding-top: var(--smallPad);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 20rem;
+  margin: var(--mediumPad) auto;
+  .list-wrap {
+    padding-top: 1rem;
+    display: grid;
+    gap: 1rem;
+  }
 `

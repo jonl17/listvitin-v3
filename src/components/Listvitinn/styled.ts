@@ -8,4 +8,5 @@ export const Anchor = styled(Link)`
   position: absolute;
   width: 175px;
   left: var(--smallPad);
+  top: 20px;
 `

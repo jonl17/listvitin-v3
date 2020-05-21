@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { useContext } from 'react'
 import { FilterContext } from "~/context/Filter"
+import { exhibitionFilter } from "~/shared/methods"
 import { Syning as SyningType } from "~/types"
 import { Container } from "./styled"
 import Syning from './Syning'
@@ -46,21 +47,8 @@ const Syningar = () => {
 
   const { filter } = useContext(FilterContext)
 
-  const filteredData = data.exhibitions.nodes.filter(syning => {
+  const filteredData = data.exhibitions.nodes.filter(syning => exhibitionFilter(syning, filter))
 
-    const today = new Date()
-    const opnun = new Date(syning.opnun)
-    const lokun = new Date(syning.lokun)
-    if (filter === "opna bráðum") {
-      return today < opnun
-    }
-    else if (filter === "opnar") {
-      return today >= opnun && today <= lokun
-    }
-    else if (filter === "afstaðnar") {
-      return today > lokun
-    }
-  })
   return (
     <Container>
       {filteredData.map((syning, index) => (

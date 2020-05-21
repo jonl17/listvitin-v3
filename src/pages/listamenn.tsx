@@ -1,13 +1,14 @@
 import React from 'react'
 import ListamennList from "~/components/ListamennList"
 import { PageWrap } from "~/components/PageWrap"
-import Search from "~/components/Search"
+import SearchProvider from "~/context/Search"
 
 const Listamenn = () => {
   return (
     <PageWrap>
-      <Search></Search>
-      <ListamennList></ListamennList>
+      <SearchProvider>
+        <ListamennList></ListamennList>
+      </SearchProvider>
     </PageWrap>
   )
 }

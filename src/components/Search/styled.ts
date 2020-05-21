@@ -1,16 +1,14 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-
-  margin-top: var(--mediumPad);
+  height: 50px;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
   box-sizing: border-box;
 
   .search-wrap {
-    margin-top: var(--smallPad);
     position: absolute;
     top: 0;
     display: flex;
@@ -25,16 +23,24 @@ export const Container = styled.div`
       align-items: center;
       box-sizing: border-box;
       padding: 1px;
+      i {
+        color: gray;
+      }
     }
     input {
       height: var(--smallPad);
-      font-size: 16px;
+      font-size: 1rem;
       outline: none;
       width: 100%;
       margin: 0;
       box-sizing: border-box;
       padding-left: var(--smallPad);
+      border: 1px solid gray;
+      border-radius: 4px;
+      :focus {
+        border: 1px solid var(--primary);
+        outline: none;
+      }
     }
-
   }
 `
