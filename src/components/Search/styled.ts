@@ -36,7 +36,7 @@ export const Container = styled.div`
       box-sizing: border-box;
       padding-left: var(--smallPad);
       border: 1px solid gray;
-      border-radius: 4px;
+      border-radius: var(--borderRadius);
       :focus {
         border: 1px solid var(--primary);
         outline: none;

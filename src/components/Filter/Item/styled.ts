@@ -20,6 +20,7 @@ export const ItemBox = styled.div`
     width: 1rem;
     background: ${(props: Props) => props.active ? "var(--primary)" : "lightgray"};  
     margin-right: 0.5rem;
+    border-radius: var(--borderRadius);
   }
   p {
     margin: 0;

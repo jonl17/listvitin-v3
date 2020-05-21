@@ -4,7 +4,7 @@ import { Open } from "~/types"
 
 
 export const HeaderContainer = styled.div`
-  height: 3rem;
+  height: 4rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@ export const HeaderContainer = styled.div`
   box-sizing: border-box;
   z-index: 8;
   width: 100%;
-  background: white;
+  background: transparent;
 
   .pages-wrap {
     display: flex;
