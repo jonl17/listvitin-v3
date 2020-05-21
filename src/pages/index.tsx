@@ -1,13 +1,16 @@
 import React from 'react'
-import Filter from "~/components/Filter"
+import Listvitinn from "~/components/Listvitinn"
 import { PageWrap } from "~/components/PageWrap"
-import Syningar from "~/components/Syningar"
 
 const Index = () => {
   return (
     <PageWrap>
-      <Filter></Filter>
-      <Syningar></Syningar>
+      {/* <Filter></Filter>
+      <Syningar></Syningar> */}
+      <div style={{ color: "var(--primary)" }}>
+        <Listvitinn></Listvitinn>
+        <p>Þessi síða er í vinnslu / Site in development</p>
+      </div>
     </PageWrap>
   )
 }

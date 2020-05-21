@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const PageWrap = styled.div`
-  display: grid;
-  grid-template-columns: var(--boxSize) 1fr var(--boxSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 `

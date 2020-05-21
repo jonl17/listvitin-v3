@@ -1,6 +1,4 @@
 import React, { ReactChild } from 'react'
-import Header from "~/components/Header/index"
-import BurgerProvider from '~/context/BurgerMenu'
 import FilterProvider from "~/context/Filter"
 import "./global.css"
 
@@ -12,9 +10,9 @@ const Layout: React.FC<Props> = ({ children }) => {
 
   return (
     <>
-      <BurgerProvider>
+      {/* <BurgerProvider>
         <Header ></Header>
-      </BurgerProvider>
+      </BurgerProvider> */}
       <FilterProvider>
         {children}
       </FilterProvider>
