@@ -19,7 +19,7 @@ module.exports = {
     description: `Myndlistarsýningar á Íslandi.`,
     url: `https://listvitinn.art/`,
     logo: "/assets/listvitinn-logo2.png",
-    favicon: "assets/viti.png",
+    favicon: "assets/listvitinn-small-logo1.png",
     pages: pages
   },
   plugins: [

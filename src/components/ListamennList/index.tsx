@@ -15,7 +15,7 @@ interface QueryProps {
 const Listamennlist = () => {
   const data: QueryProps = useStaticQuery(graphql`
   {
-    artists: allContentfulArtist (sort: {fields: nafn}) {
+    artists: allContentfulArtist {
       nodes {
         id
         nafn
