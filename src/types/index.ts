@@ -31,6 +31,11 @@ export interface Artist {
   id: string;
   nafn: string;
 }
+export interface RichText {
+  childContentfulRichText: {
+    html: string;
+  }
+}
 export interface Syning {
   id: string;
   title: string;
@@ -40,6 +45,8 @@ export interface Syning {
   mynd: Mynd;
   stadur: StadurShort;
   artist: Artist[];
+  texti_is: RichText;
+  texti_en: RichText;
 }
 export interface Artist {
   nafn: string;

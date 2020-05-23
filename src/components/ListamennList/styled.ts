@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 20rem;
-  margin: var(--mediumPad) auto;
+  margin: 0 auto;
   .list-wrap {
     padding-top: 1rem;
     display: grid;

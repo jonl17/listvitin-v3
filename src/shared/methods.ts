@@ -9,7 +9,6 @@ export const exhibitionFilter = (syning: Syning, filter: ExhibitionFilterType) =
     return today < opnun
   }
   else if (filter === "opnar") {
-    console.log(opnun)
     return today >= opnun && today <= lokun
   }
   else if (filter === "afstaðnar") {

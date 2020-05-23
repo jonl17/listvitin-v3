@@ -6,7 +6,7 @@ export const Container = styled.div`
   grid-auto-rows: var(--boxSize);
   justify-content: flex-start;
   gap: var(--smallPad);
-  margin: var(--mediumPad) 0 var(--mediumPad) 0;
+  margin: 0 0 var(--mediumPad) 0;
   padding-top: var(--smallPad);
   grid-area: 1/2;
   justify-content: center;

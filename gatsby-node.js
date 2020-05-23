@@ -16,17 +16,16 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  console.log(exhibitions)
   exhibitions.data.allContentfulExhibition.nodes.forEach(syning => {
     const { slug } = syning
 
     if (!slug) return
 
     createPage({
-      path: slug,
+      path: "/syningar/" + slug,
       component: resolve(__dirname, "./src/templates/Syning/index.tsx"),
       context: {
-        ...syning
+        ...syning,
       }
     })
   })
