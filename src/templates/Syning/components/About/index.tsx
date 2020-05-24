@@ -12,7 +12,7 @@ const About: React.FC<{ syning: Syning }> = ({ syning }) => {
         <p className="title">{title}</p>
         <ExhibitionDate opnun={syning.opnun} lokun={syning.lokun}></ExhibitionDate>
       </div>
-      <div className="about-text" dangerouslySetInnerHTML={{ __html: syning.texti_is.childContentfulRichText.html }}></div>
+      {syning.texti_is && <div className="about-text" dangerouslySetInnerHTML={{ __html: syning.texti_is.childContentfulRichText.html }}></div>}
     </Container>
   )
 }
