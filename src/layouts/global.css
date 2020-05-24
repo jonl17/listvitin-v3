@@ -9,7 +9,8 @@
   --mediumPad: 5em;
   --largePad: 10em;
   --mobileBreakpoint: 900px;
-  --boxSize: 14em;
+  --boxSize: 12em;
+  --largeBoxSize: 22em;
   --borderRadius: 4px;
 }
 * {

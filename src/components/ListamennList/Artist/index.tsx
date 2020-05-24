@@ -11,7 +11,7 @@ const Artist: React.FC<{ artist: ArtistType }> = ({ artist }) => {
       <div className="exhibition-wrap">
         {artist.exhibition ?
           artist.exhibition.map(syning => (
-            <p style={exhibitionFilter(syning, "opnar") ? { color: "var(--primary)" } : { color: "initial" }}>{syning.title}</p>
+            <p style={exhibitionFilter(syning.opnun, syning.lokun, "opnar") ? { color: "var(--primary)" } : { color: "initial" }}>{syning.title}</p>
           ))
           : null
         }

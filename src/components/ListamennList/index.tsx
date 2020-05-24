@@ -32,7 +32,11 @@ const Listamennlist = () => {
 
   const { searchParam } = useContext(SearchContext)
 
-  const filteredArtists = data.artists.nodes.filter(artist => artist.nafn.toLowerCase().includes(searchParam.toLowerCase()))
+
+  const matcher = new RegExp(searchParam, "gi")
+  const filteredArtists = data.artists.nodes.filter(artist => {
+    return artist.nafn.match(matcher)
+  })
 
   return (
     <Container>

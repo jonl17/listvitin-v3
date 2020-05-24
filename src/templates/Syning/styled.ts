@@ -8,13 +8,14 @@ export const PageWrap = styled.div`
   padding: var(--smallPad) var(--mediumPad);
   gap: var(--smallPad);
   .left-side-wrap {
+    display: grid;
+    grid-auto-rows: var(--largeBoxSize);
     .image-wrap {
-      height: 25rem;
       position: relative;
     }
   }
 `
 export const Image = styled(Img)`
-  width: 100%;
+  height: 100%;
   position: absolute;
 `

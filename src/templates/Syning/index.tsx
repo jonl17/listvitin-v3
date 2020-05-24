@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import React from 'react'
 import { Syning } from "~/types"
 import About from "./components/About"
+import Countdown from "./components/Countdown"
 import { Image, PageWrap } from "./styled"
 
 interface Props {
@@ -13,7 +14,6 @@ interface Props {
   }
 }
 
-
 const SyningTemplate: React.FC<Props> = ({ pageContext, data }) => {
   const { contentfulExhibition: syning } = data
   return (
@@ -22,6 +22,9 @@ const SyningTemplate: React.FC<Props> = ({ pageContext, data }) => {
         <div className="image-wrap">
           <Image imgStyle={{ objectFit: "contain" }} fluid={syning.mynd.fluid}></Image>
         </div>
+        <Countdown opnun={syning.opnun} lokun={syning.lokun}></Countdown>
+        {/* opið í dag */}
+        {/* sýningarstaður excerpt */}
       </div>
       <About syning={syning}></About>
     </PageWrap>
