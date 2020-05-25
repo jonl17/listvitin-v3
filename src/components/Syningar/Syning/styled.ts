@@ -23,6 +23,6 @@ export const Image = styled(Img)`
 position: absolute;
 height: 100%;
 width: 100%;
-  opacity: 0;
-  animation: ${fadeIn} 0.2s ease-in forwards;
+opacity: 0;
+animation: ${fadeIn} 0.2s ease-in forwards;
 `

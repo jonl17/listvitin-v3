@@ -6,7 +6,10 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     p {
-     margin: 0; 
+      margin: 0;
+    }
+    .title {
+      font-size: var(--titleSize);
     }
   }
   .about-text {

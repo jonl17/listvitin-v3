@@ -12,6 +12,7 @@
   --boxSize: 12em;
   --largeBoxSize: 22em;
   --borderRadius: 4px;
+  --titleSize: 1.2rem;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;

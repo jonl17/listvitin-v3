@@ -25,3 +25,25 @@ export const getDaysToDate = (date: Date) => {
   const days = Math.floor(hours / 24)
   return days.toString()
 }
+
+const Months = [
+  { is: "janúar", en: "January" },
+  { is: "febrúar", en: "February" },
+  { is: "mars", en: "March" },
+  { is: "apríl", en: "April" },
+  { is: "maí", en: "May" },
+  { is: "júní", en: "June" },
+  { is: "júlí", en: "July" },
+  { is: "ágúst", en: "August" },
+  { is: "september", en: "September" },
+  { is: "október", en: "October" },
+  { is: "nóvember", en: "November" },
+  { is: "desember", en: "Desember" }
+]
+
+export const verboseDate = (date: Date, icelandic: boolean) => {
+  const day = date.getDate().toString()
+  const month = Months[date.getMonth()]
+  const year = date.getFullYear().toString()
+  return `${day}. ${icelandic ? month.is : month.en} ${year}`
+}

@@ -1,8 +1,9 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from 'react'
+import About from "~/components/About"
+import Countdown from "~/components/Countdown"
+import ExhibitionDate from "~/components/ExhibitionDate"
 import { Syning } from "~/types"
-import About from "./components/About"
-import Countdown from "./components/Countdown"
 import { Image, PageWrap } from "./styled"
 
 interface Props {
@@ -22,7 +23,18 @@ const SyningTemplate: React.FC<Props> = ({ pageContext, data }) => {
         <div className="image-wrap">
           <Image imgStyle={{ objectFit: "contain" }} fluid={syning.mynd.fluid}></Image>
         </div>
-        <Countdown opnun={syning.opnun} lokun={syning.lokun}></Countdown>
+
+        <div className="info-box">
+
+          {syning.stadur && <p className="syningarstadur-link">
+            <Link to={"/syningarstadir/" + syning.stadur.slug}>{syning.stadur.title}</Link>
+          </p>}
+
+          <ExhibitionDate opnun={syning.opnun} lokun={syning.lokun}></ExhibitionDate>
+
+          <Countdown opnun={syning.opnun} lokun={syning.lokun}></Countdown>
+
+        </div>
         {/* opið í dag */}
         {/* sýningarstaður excerpt */}
       </div>

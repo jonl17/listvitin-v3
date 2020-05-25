@@ -8,14 +8,21 @@ export const PageWrap = styled.div`
   padding: var(--smallPad) var(--mediumPad);
   gap: var(--smallPad);
   .left-side-wrap {
-    display: grid;
-    grid-auto-rows: var(--largeBoxSize);
+    display: flex;
+    flex-direction: column;
+    .info-box {
+      text-align: center;
+      .syningarstadur-link {
+        font-size: var(--titleSize);
+      }
+    }
     .image-wrap {
       position: relative;
+      max-height: 25rem;
     }
   }
 `
 export const Image = styled(Img)`
-  height: 100%;
-  position: absolute;
+  width: 100%;
+  max-height: 25rem;
 `
