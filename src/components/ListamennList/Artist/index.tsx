@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from 'react'
 import { exhibitionFilter } from "~/shared/methods"
 import { Artist as ArtistType } from '~/types'
@@ -11,7 +12,11 @@ const Artist: React.FC<{ artist: ArtistType }> = ({ artist }) => {
       <div className="exhibition-wrap">
         {artist.exhibition ?
           artist.exhibition.map(syning => (
-            <p style={exhibitionFilter(syning.opnun, syning.lokun, "opnar") ? { color: "var(--primary)" } : { color: "initial" }}>{syning.title}</p>
+            <p style={exhibitionFilter(syning.opnun, syning.lokun, "opnar") ? { color: "var(--primary)" } : { color: "initial" }}>
+              <Link to={"/syningar/" + syning.slug}>
+                {syning.title}
+              </Link>
+            </p>
           ))
           : null
         }

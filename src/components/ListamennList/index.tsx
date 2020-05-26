@@ -32,11 +32,18 @@ const Listamennlist = () => {
 
   const { searchParam } = useContext(SearchContext)
 
-
   const matcher = new RegExp(searchParam, "gi")
   const filteredArtists = data.artists.nodes.filter(artist => {
     return artist.nafn.match(matcher)
   })
+
+  // alphabetically sort by icelandic first names
+
+  const collator = new Intl.Collator("is")
+  filteredArtists.sort((a, b) => {
+    return collator.compare(a.nafn, b.nafn)
+  })
+
 
   return (
     <Container>

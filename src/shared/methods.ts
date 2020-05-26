@@ -47,3 +47,4 @@ export const verboseDate = (date: Date, icelandic: boolean) => {
   const year = date.getFullYear().toString()
   return `${day}. ${icelandic ? month.is : month.en} ${year}`
 }
+
