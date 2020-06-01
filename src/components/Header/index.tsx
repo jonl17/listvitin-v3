@@ -7,7 +7,7 @@ import Listvitinn from '../Listvitinn'
 import { HeaderContainer } from "./styled"
 
 
-const Header = () => {
+const Header: React.FC<{ pathname: string }> = ({ pathname }) => {
   const data: HeaderMetaData = useStaticQuery(graphql`
   {
     site {
@@ -32,7 +32,7 @@ const Header = () => {
       <div className="pages-wrap">
         {pages.map((page, index) => (
           <p key={index}>
-            <Link activeClassName="active" onClick={() => setOpen(false)} to={page.slug}>{page.name.is}</Link>
+            <Link partiallyActive={page.name.is === "Sýningar" && pathname.includes("/syningar/")} activeClassName="active" onClick={() => setOpen(false)} to={page.slug}>{page.name.is}</Link>
           </p>
         ))}
       </div>

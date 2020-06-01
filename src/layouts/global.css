@@ -4,13 +4,15 @@
   --black: rgb(16,16,16);
   --white: white;
   --gray: lightgray;
-  --smallestPad: 1.5rem;
+  --smallestPad: 1.25rem;
   --smallPad: 2.5em;
   --mediumPad: 5em;
   --largePad: 10em;
   --mobileBreakpoint: 900px;
-  --boxSize: 14em;
+  --boxSize: 12em;
+  --largeBoxSize: 22em;
   --borderRadius: 4px;
+  --titleSize: 1.2rem;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;

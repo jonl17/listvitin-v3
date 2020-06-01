@@ -1,4 +1,5 @@
 import React, { ReactChild } from 'react'
+import styled from "styled-components"
 import Header from "~/components/Header/index"
 import SEO from "~/components/SEO"
 import BurgerProvider from '~/context/BurgerMenu'
@@ -6,19 +7,26 @@ import FilterProvider from "~/context/Filter"
 import "./global.css"
 
 interface Props {
-  children: ReactChild
+  children: ReactChild;
+  location: Location;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const PageWrap = styled.div`
+  margin-top: var(--mediumPad);
+`
+
+const Layout: React.FC<Props> = ({ children, location }) => {
 
   return (
     <>
       <SEO></SEO>
       <BurgerProvider>
-        <Header ></Header>
+        <Header pathname={location.pathname}></Header>
       </BurgerProvider>
       <FilterProvider>
-        {children}
+        <PageWrap id="content">
+          {children}
+        </PageWrap>
       </FilterProvider>
     </>
   )

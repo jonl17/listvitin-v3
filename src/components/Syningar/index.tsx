@@ -47,7 +47,7 @@ const Syningar = () => {
 
   const { filter } = useContext(FilterContext)
 
-  const filteredData = data.exhibitions.nodes.filter(syning => exhibitionFilter(syning, filter))
+  const filteredData = data.exhibitions.nodes.filter(syning => exhibitionFilter(syning.opnun, syning.lokun, filter))
 
   return (
     <Container>
