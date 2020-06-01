@@ -1,16 +1,19 @@
 require("dotenv").config({
-  path: `.env.development`
+  path: `.env.development`,
 })
 
 const aliases = {
-  "~": "src"
+  "~": "src",
 }
 
 const pages = [
   { name: { is: `Sýningar`, en: `Exhibitions` }, slug: `/` },
   { name: { is: `Listamenn`, en: `Artists` }, slug: `/listamenn` },
   { name: { is: `Sýningarstaðir`, en: `Venues` }, slug: `/syningarstadir` },
-  { name: { is: `Um Listvitann`, en: `About Listvitinn` }, slug: `/um-listvitann` },
+  {
+    name: { is: `Um Listvitann`, en: `About Listvitinn` },
+    slug: `/um-listvitann`,
+  },
 ]
 
 module.exports = {
@@ -20,7 +23,7 @@ module.exports = {
     url: `https://listvitinn.art/`,
     logo: "/assets/listvitinn-logo2.png",
     favicon: "assets/viti.png",
-    pages: pages
+    pages: pages,
   },
   plugins: [
     {
@@ -46,8 +49,8 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: aliases,
-        extensions: [`ts`, `tsx`]
-      }
-    }
+        extensions: [`ts`, `tsx`],
+      },
+    },
   ],
 }
