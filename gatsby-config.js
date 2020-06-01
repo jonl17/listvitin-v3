@@ -7,7 +7,7 @@ const aliases = {
 }
 
 const pages = [
-  { name: { is: `Sýningar`, en: `Exhibitions` }, slug: `/` },
+  { name: { is: `Sýningarnar`, en: `Exhibitions` }, slug: `/` },
   { name: { is: `Listamenn`, en: `Artists` }, slug: `/listamenn` },
   { name: { is: `Sýningarstaðir`, en: `Venues` }, slug: `/syningarstadir` },
   {
