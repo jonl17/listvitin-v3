@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react"
+import { PageWrap } from "../components/PageWrap"
 
 const UmListvitann = () => {
-  return (
-    <div>
-      <p>Um Listvitann</p>
-    </div>
-  )
+  return <PageWrap>Bleeee!!!!!</PageWrap>
 }
 
 export default UmListvitann
