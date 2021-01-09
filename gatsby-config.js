@@ -9,10 +9,10 @@ const aliases = {
 const pages = [
   { name: { is: `Sýningarnar`, en: `Exhibitions` }, slug: `/` },
   { name: { is: `Listamenn`, en: `Artists` }, slug: `/listamenn` },
-  {
-    name: { is: `Um Listvitann`, en: `About Listvitinn` },
-    slug: `/um-listvitann`,
-  },
+  // {
+  //   name: { is: `Um Listvitann`, en: `About Listvitinn` },
+  //   slug: `/um-listvitann`,
+  // },
 ]
 
 module.exports = {
